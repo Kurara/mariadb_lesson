@@ -18,8 +18,43 @@ class TestProcessor(unittest.TestCase):
         processor = TextProcessor()
         processor.read_csv(filepath)
 
-    def test_finto_creazione_tabelle(self):
+    def test_insert_cliente(self):
         conection = MariaDBManagement()
+        conection.connect_db("complaints")
+        import datetime
+        data = {
+            "Nome": "Primo cliente",
+            "Indirizzo": "Strada principale",
+            "Eta": 34,
+            "Data_registrazione": datetime.datetime.now().isoformat()
+        }
+        conection.insert("Clienti", data)
+        conection.disconect_db()
+
+    """Non tests per esseguirli soltanto una volta (in ordine di aparizione)"""
+    def creazione_db(self):
+        conection = MariaDBManagement()
+        conection.connect_db()
+        conection.create_database()
+        conection.disconect_db()
+
+    def creazione_clienti(self):
+        conection = MariaDBManagement()
+        conection.connect_db("complaints")
+        conection.create_table()
+        conection.disconect_db()
+
+    def modificazione_reclami(self):
+        conection = MariaDBManagement()
+        conection.connect_db("complaints")
+        conection.modify_table()
+        conection.disconect_db()
+
+    def add_all_dati_reclami(self):
+        conection = MariaDBManagement()
+        conection.connect_db("complaints")
+        conection.add_columns()
+        conection.disconect_db()
 
     def tearDown(self):
         if os.path.exists(self.filepath) and not self.maintain_files:
