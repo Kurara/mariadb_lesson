@@ -1,4 +1,3 @@
 ### Documentazione
-
 https://mariadb.com/kb/it/documentazione-di-mariadb/
-https://mariadb-corporation.github.io/mariadb-connector-python/
+https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html
