@@ -1,4 +1,5 @@
 import csv
+import mysql.connector
 
 
 class TextProcessor:
@@ -13,3 +14,24 @@ class TextProcessor:
             reader = csv.DictReader(csvfile, delimiter=',')
             for row in reader:
                 print(row)
+
+
+class MariaDBManagement:
+
+    def connect_db(self, database=None):
+        if database:
+            self.cnx = mysql.connector.connect(
+                user='root',
+                password='password',
+                host='172.17.0.2',
+                database=database
+            )
+        else:
+            self.cnx = mysql.connector.connect(
+                user='root',
+                password='password',
+                host='172.17.0.2'
+            )
+
+    def create_tables(self):
+        self.connect_db()

@@ -1,6 +1,6 @@
 import unittest
 import os
-from main import TextProcessor
+from main import TextProcessor, MariaDBManagement
 
 
 class TestProcessor(unittest.TestCase):
@@ -17,6 +17,9 @@ class TestProcessor(unittest.TestCase):
         filepath = self.BASE_PATH + "/mockups/complaints.csv"
         processor = TextProcessor()
         processor.read_csv(filepath)
+
+    def test_finto_creazione_tabelle(self):
+        conection = MariaDBManagement()
 
     def tearDown(self):
         if os.path.exists(self.filepath) and not self.maintain_files:
