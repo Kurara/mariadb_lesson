@@ -1,0 +1,20 @@
+{
+    "Date received": "Data ricevuto",
+    "Product": "Prodotto",
+    "Sub-product": "Sottoprodotto",
+    "Issue": "Problema",
+    "Sub-issue": "Sottoproblema",
+    "Consumer complaint narrative": "Narrativa del reclamo",
+    "Company public response": "Risposta publica della ditta",
+    "Company": "Ditta",
+    "State": "Paese",
+    "ZIP code": "Cap",
+    "Tags": "Tags",
+    "Consumer consent provided?": "Proveduto il consenso del cliente?",
+    "Submitted via": "Inviato via",
+    "Date sent to company": "Data invio alla ditta",
+    "Company response to consumer": "Risposta della ditta al cliente",
+    "Timely response?": "Risposta tempestiva?",
+    "Consumer disputed?": "Client econtestato?",
+    "Complaint ID": "Id"
+}
