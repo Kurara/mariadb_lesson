@@ -8,7 +8,10 @@
             "name": "Python: Modulo",
             "type": "python",
             "request": "launch",
-            "module": "unittest"
+            "module": "unittest",
+            "args": [
+                "test.TestProcessor.test_csv_read"
+            ]
         }
     ]
 }
