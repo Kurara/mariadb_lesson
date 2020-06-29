@@ -128,6 +128,18 @@ class MariaDBManagement:
         new_value = str(input).replace("'", "\\'")
         return "'" + new_value + "'"
 
+    def select(self):
+        _cursor = self.cnx.cursor()
+        rows = None
+        try:
+            _cursor.execute("SELECT * FROM Reclami")
+            rows = _cursor.fetchmany(size=200)
+        except Exception as e:
+            print("Error executing statement select")
+            print(e)
+        
+        return rows
+
     def disconect_db(self):
         self.cnx.close()
 

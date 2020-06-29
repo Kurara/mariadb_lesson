@@ -28,6 +28,10 @@ class TestProcessor(unittest.TestCase):
         self.conection.insert("Clienti", data)
         self.conection.disconect_db()
 
+    def text_retrieve_data(self):
+        data = self.conection.select()
+        print(len(data))
+
     def tearDown(self):
         try:
             self.conection.disconect_db()

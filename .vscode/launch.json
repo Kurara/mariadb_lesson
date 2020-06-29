@@ -10,8 +10,15 @@
             "request": "launch",
             "module": "unittest",
             "args": [
-                "test.TestProcessor.test_csv_read"
+                "test.TestProcessor.text_retrieve_data"
             ]
+        },
+        {
+            "name": "Python: File corrente",
+            "type": "python",
+            "request": "launch",
+            "module": "mariadb_lesson.db_fill",
+            "cwd": "${workspaceFolder}/.."
         }
     ]
 }
